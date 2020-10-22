@@ -10,4 +10,8 @@ get("/multiply", { :controller => "application", :action => "blank_multiply_form
 get("/wizard_multiply", { :controller => "application", :action => "calculate_multiply" })
 get("/divide", { :controller => "application", :action => "blank_divide_form" })
 get("/wizard_divide", { :controller => "application", :action => "calculate_divide" })
+
+get("/street_to_coords/new", { :controller => "apis", :action => "blank_coord_form" })
+get("/street_to_coords/results", { :controller => "apis", :action => "address_coords" })
+
 end
