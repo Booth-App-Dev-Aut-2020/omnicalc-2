@@ -6,7 +6,7 @@ end
 
 def address_coords
 @address = params.fetch("user_address")
-key = GMAP_KEY
+key = ENV.fetch("GMAP_KEY")
 url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + @address + "&key=" + key
 raw_data=open(url).read
 parsed_data=JSON.parse(raw_data)
