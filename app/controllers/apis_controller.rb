@@ -16,4 +16,19 @@ parsed_data=JSON.parse(raw_data)
 render({ :template => "weather_templates/address_coords.html.erb" })
 end
 
+def blank_weather_form
+render({ :template => "weather_templates/weather_form.html.erb" })
+end
+
+def coords_weather
+@latitude = params.fetch("user_latitude")
+@longitude = params.fetch("user_longitude")
+key = ENV.fetch("DARK_SKY_KEY")
+url = "https://api.darksky.net/forecast/" + key + "/" + @latitude + "," + @longitude
+raw_data=open(url).read
+@parsed_data=JSON.parse(raw_data)
+
+render({ :template => "weather_templates/coords_weather.html.erb" })
+end
+
 end

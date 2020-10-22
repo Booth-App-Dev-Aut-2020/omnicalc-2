@@ -13,5 +13,7 @@ get("/wizard_divide", { :controller => "application", :action => "calculate_divi
 
 get("/street_to_coords/new", { :controller => "apis", :action => "blank_coord_form" })
 get("/street_to_coords/results", { :controller => "apis", :action => "address_coords" })
+get("/coords_to_weather/new", { :controller => "apis", :action => "blank_weather_form" })
+get("/coords_to_weather/results", { :controller => "apis", :action => "coords_weather" })
 
 end
