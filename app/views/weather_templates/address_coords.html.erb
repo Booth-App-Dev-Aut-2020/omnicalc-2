@@ -1,15 +1,13 @@
-<%=@url%>
-
-<h1> Addition </h1>
+<h1> Street address to coordinates results </h1>
 
 <dl>
-  <dt> First number </dt>
-  <dd> <%=@num1%> </dd>
-  <dt> Second number </dt>
-  <dd> <%=@num2%> </dd>
-  <dt> Result </dt>
-  <dd> <%=@result%> </dd>
+  <dt> Street Address </dt>
+  <dd> <%=@address%> </dd>
+  <dt> Latitude </dt>
+  <dd> <%=@latitude%> </dd>
+  <dt> Longitude </dt>
+  <dd> <%=@longitude%> </dd>
 
 </dl>
 
-<a href="/add"> Do another addition </a>
+<a href="/street_to_coords/new"> Search for another address </a>
